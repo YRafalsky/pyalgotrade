@@ -367,6 +367,7 @@ class Position(object):
 
     def onOrderEvent(self, orderEvent):
         self.__updatePosTracker(orderEvent)
+        print "Position::onOrderEvent() called"
 
         order = orderEvent.getOrder()
         if not order.isActive():
